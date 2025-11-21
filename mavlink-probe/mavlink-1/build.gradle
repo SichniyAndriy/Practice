@@ -1,0 +1,29 @@
+group = 'com.mavlink'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'com.mavlink.probe.MainApp'
+    applicationDefaultJvmArgs = ['‑Dfile.encoding=UTF‑8', '‑Dsun.stdout.encoding=UTF‑8', '‑Dsun.stderr.encoding=UTF‑8']
+    applicationName="mavlink-1.jar"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': application.mainClass
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveFileName="mavlink-1.jar"
+}

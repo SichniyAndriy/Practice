@@ -1,0 +1,4 @@
+rootProject.name = 'mavlink-probe'
+
+include 'mavlink-2'
+include 'mavlink-1'
