@@ -1,0 +1,25 @@
+type Query {
+    pets: [Pet]
+    students: [Student]
+}
+
+type Pet {
+    name: String
+    color: String
+    owner: Person
+    previousOwner: Person
+    description: String
+}
+
+type Student{
+    firstName: String
+    lastName: String
+    city: String
+    address: String
+    age: Int
+}
+
+type Person {
+    fullName: String
+    age: Int
+}
