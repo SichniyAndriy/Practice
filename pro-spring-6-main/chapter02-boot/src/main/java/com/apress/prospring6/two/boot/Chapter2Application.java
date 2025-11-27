@@ -31,6 +31,7 @@ import com.apress.prospring6.two.decoupled.MessageRenderer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
         (scanBasePackages = "com.apress.prospring6.two.annotated") // needed because this configuration class  is in package com.apress.prospring6.two.boot
 public class Chapter2Application {
