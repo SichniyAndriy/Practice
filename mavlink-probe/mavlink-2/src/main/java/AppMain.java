@@ -1,9 +1,3 @@
-import io.dronefleet.mavlink.MavlinkConnection;
-import io.dronefleet.mavlink.ardupilotmega.ArdupilotmegaDialect;
-import io.dronefleet.mavlink.common.CommonDialect;
-import io.dronefleet.mavlink.minimal.Heartbeat;
-import io.dronefleet.mavlink.minimal.MavAutopilot;
-import io.dronefleet.mavlink.minimal.MavType;
 import java.io.EOFException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -18,7 +12,7 @@ public class AppMain {
     private static final int DEFAULT_TIMEOUT = 10_000;
 
 
-    public static void main(String[] args) {
+    public static <MavlinkConnection> void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 
         try (Socket socket = new Socket(DEFAULT_HOST, DEFAULT_PORT)) {

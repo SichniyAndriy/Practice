@@ -1,4 +1,3 @@
-import io.dronefleet.mavlink.MavlinkConnection;
 
 public class Drone implements Runnable {
 
