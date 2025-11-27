@@ -24,9 +24,6 @@ public class Main {
 
     public static void main(String[] args) {
         ConnectionPoolConfig config = new ConnectionPoolConfig();
-        config.setMaxTotal(80);
-        config.setMaxIdle(4);
-        config.setMinIdle(4);
 
         try (JedisPooled jedisPooled = new JedisPooled(config, "localhost", 6379)) {
             List<Future<?>> futures = new ArrayList<>();
