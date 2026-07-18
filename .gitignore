@@ -57,3 +57,4 @@ dependency-reduced-pom.xml
 /deploy/
 /deployments/
 /generated/
+/crypto/secrets/crypto-config.properties
